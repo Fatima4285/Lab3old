@@ -43,19 +43,19 @@ public class Address {
 	}
 	
 	public String getCity() {
-		this.city = city;
+		return city;
 	}
 	
 	public String getState() {
-		this.state = state;
+		return state;
 	}
 	
 	public String getPostalCode() {
-		this.postalCode = postalCode;
+		return postalCode;
 	}
 	
 	public String getCountry() {
-		this.country = country;
+		return country;
 	}
 	
 	public boolean validate() {   // the body of this method was generated using AI but was modified for accurate results.
