@@ -1,5 +1,7 @@
+package ca.ucalgary.ensf380;
 
-public class Student extends Person{
+class Student extends Person {
+
 	private String studentNumber;
 	private Professor supervisor;
 	private double averageMark;
@@ -46,8 +48,10 @@ public class Student extends Person{
 	//methods
 	public boolean isEligibleToEnroll() {
 		if(studentNumber != null && averageMark >= 50.00) { //mark is a percentage
+			System.out.println("The Student " + getName() + " is Elgible to enroll");
 			return true;
 		}else {
+			System.out.println("The student " + getName() + " is not Eligible to enroll");
 			return false;
 		}
 	}

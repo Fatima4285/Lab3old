@@ -1,5 +1,6 @@
+package ca.ucalgary.ensf380;
 
-public abstract class Person {
+class Person {
 	protected String name;
 	protected String phoneNumber;
 	protected String emailAddress;
@@ -14,8 +15,6 @@ public abstract class Person {
 		this.setAddress(address);
 		lastPersonalNumber++; //increment lastPersonalNumber
 	}
-	
-	
 	
 	//setters
 	public void setName(String name) {
@@ -52,14 +51,13 @@ public abstract class Person {
 		return this.address;
 	}
 	
-	public int getLastPersonalNumber() {
+	public static int getLastPersonalNumber() {
 		return lastPersonalNumber;
 	}
 	
 	//methods
 	protected String nextPersonalNumber(short type) {
-		//Help from chatgpt
-        // Adjust the number based on 'type', here I'm just concatenating type and incremented last number
+		//Help from chatgpt to create the return statement
         lastPersonalNumber++; // Ensure it's incremented for each call
         return "PN" + type + "-" + lastPersonalNumber;
     }
@@ -71,4 +69,5 @@ public abstract class Person {
 			return false;
 		}
 	}
+
 }

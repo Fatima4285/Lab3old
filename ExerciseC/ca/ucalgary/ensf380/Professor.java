@@ -1,6 +1,7 @@
 package ca.ucalgary.ensf380;
 
-class Professor extends Person {
+class Professor extends Person{
+
 	private String teacherNumber;
 	private double salary;
 	
@@ -33,7 +34,4 @@ class Professor extends Person {
 	public double getSalary() {
 		return salary;
 	}
-	
-	
-
 }

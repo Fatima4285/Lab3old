@@ -1,6 +1,6 @@
 package ca.ucalgary.ensf380;
 
-public class Address {
+class Address {
 	private String street;
 	private String city;
 	private String state;
@@ -58,17 +58,28 @@ public class Address {
 		return country;
 	}
 	
-	public boolean validate() {   // the body of this method was generated using AI but was modified for accurate results.
-		return street != null && !street.isEmpty()
-                && city != null && !city.isEmpty()
-                && state != null && !state.isEmpty()
-                && postalCode != null && !postalCode.isEmpty()
-                && country != null && !country.isEmpty();
-	}
+	public String validate() {
+        if (street == null || street.isEmpty()) {
+            return "Street address is missing.";
+        }
+        if (city == null || city.isEmpty()) {
+            return "City is missing.";
+        }
+        if (state == null || state.isEmpty()) {
+            return "State is missing.";
+        }
+        if (postalCode == null || postalCode.isEmpty()) {
+            return "Postal code is missing.";
+        }
+        if (country == null || country.isEmpty()) {
+            return "Country is missing.";
+        }
+        return "Address is valid.\n";
+
+    }
 	
 	public String outputAsLabel() {  //this method returns the full address 
 		return street + ", " + city + ", " + state + ", " + country + ", " +  postalCode;
 	}
-	
-	
+
 }
