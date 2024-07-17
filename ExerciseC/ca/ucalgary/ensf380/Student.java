@@ -5,8 +5,8 @@ public class Student extends Person{
 	private double averageMark;
 	
 	//constructors
-	public Student() {
-		super(); //default constructor from abstract class
+	public Student(String name, String phoneNumber, String emailAddress, Address address) {
+		super(name, phoneNumber, emailAddress, address);
 	}
 	
 	public Student(String name, String phoneNumber, String emailAddress, Address address, 
@@ -45,7 +45,7 @@ public class Student extends Person{
 	
 	//methods
 	public boolean isEligibleToEnroll() {
-		if(studentNumber != null && supervisor != null && averageMark >= 50.00) { //mark is a percentage
+		if(studentNumber != null && averageMark >= 50.00) { //mark is a percentage
 			return true;
 		}else {
 			return false;
